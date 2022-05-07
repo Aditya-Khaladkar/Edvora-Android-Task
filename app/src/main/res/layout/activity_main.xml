@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4D4949"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/home_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:background="@color/black">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edvora"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_gravity="center|left"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/home_userProfile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center|right"
+                android:src="@color/white"/>
+
+            <TextView
+                android:id="@+id/home_userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="user name"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginRight="50dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center|right"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rides: "
+            android:textSize="17sp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleLine="true"
+            android:layout_margin="10dp"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/ride_nearest"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Nearest"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/ride_upcoming"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Upcoming"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/ride_past"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Past"/>
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <Spinner
+            android:id="@+id/homeMenu"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ride_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
