@@ -1,3 +1,2 @@
 #### Edvora-Android-Task
-I was assigned a task to create an android app which fetch data from an external API which contain username, userid, state, city and ride details of that particular city.
-My task was to display the data from JSON format into a simple text format and arrange the data according to nearest ride
+I was given the task of developing an Android app that would retrieve data from an external API that had username, userid, state, city, and ride information for that specific city. My objective was to convert the JSON data into a simple text format and organise the information by closest ride.
